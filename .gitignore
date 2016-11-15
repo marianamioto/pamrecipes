@@ -2,3 +2,5 @@ venv/
 *.pyc
 *.pyo
 *.swp
+db.sqlite3
+

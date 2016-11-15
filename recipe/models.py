@@ -9,3 +9,10 @@ class Recipe(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Ingredient(models.Model):
+    name = models.CharField(max_length=80)
+    quantity = models.FloatField()
+    unit = models.CharField(max_length=30, blank=True)
+    recipe = models.ForeignKey(Recipe, related_name='ingredients')
